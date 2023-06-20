@@ -14,6 +14,14 @@
 		4DA9C4B02A423474006F31D8 /* Gympact2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4AF2A423474006F31D8 /* Gympact2_0Tests.swift */; };
 		4DA9C4BA2A423474006F31D8 /* Gympact2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4B92A423474006F31D8 /* Gympact2_0UITests.swift */; };
 		4DA9C4BC2A423474006F31D8 /* Gympact2_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4BB2A423474006F31D8 /* Gympact2_0UITestsLaunchTests.swift */; };
+		4DA9C4D12A4235BB006F31D8 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4D02A4235BB006F31D8 /* Homeview.swift */; };
+		4DA9C4D72A423803006F31D8 /* Cardioview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4D62A423803006F31D8 /* Cardioview.swift */; };
+		4DA9C4D92A42380E006F31D8 /* Strengthview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4D82A42380E006F31D8 /* Strengthview.swift */; };
+		4DA9C4DC2A423857006F31D8 /* Mainview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4DB2A423857006F31D8 /* Mainview.swift */; };
+		4DA9C4DF2A423A71006F31D8 /* Loginview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4DE2A423A71006F31D8 /* Loginview.swift */; };
+		4DA9C4E32A423A95006F31D8 /* Registerview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E22A423A95006F31D8 /* Registerview.swift */; };
+		4DA9C4E52A42469A006F31D8 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */; };
+		4DA9C4E72A4250E2006F31D8 /* HomeStatsview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		4DA9C4B52A423474006F31D8 /* Gympact2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gympact2.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9C4B92A423474006F31D8 /* Gympact2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gympact2_0UITests.swift; sourceTree = "<group>"; };
 		4DA9C4BB2A423474006F31D8 /* Gympact2_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gympact2_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DA9C4D02A4235BB006F31D8 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
+		4DA9C4D62A423803006F31D8 /* Cardioview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardioview.swift; sourceTree = "<group>"; };
+		4DA9C4D82A42380E006F31D8 /* Strengthview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strengthview.swift; sourceTree = "<group>"; };
+		4DA9C4DB2A423857006F31D8 /* Mainview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainview.swift; sourceTree = "<group>"; };
+		4DA9C4DE2A423A71006F31D8 /* Loginview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loginview.swift; sourceTree = "<group>"; };
+		4DA9C4E22A423A95006F31D8 /* Registerview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registerview.swift; sourceTree = "<group>"; };
+		4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				4DA9C49E2A423470006F31D8 /* Gympact2_0App.swift */,
-				4DA9C4A02A423470006F31D8 /* ContentView.swift */,
+				4DA9C4CB2A4234B1006F31D8 /* Controllers */,
+				4DA9C4CA2A4234A7006F31D8 /* Models */,
+				4DA9C4C92A423489006F31D8 /* Views */,
 				4DA9C4A22A423473006F31D8 /* Assets.xcassets */,
 				4DA9C4A42A423473006F31D8 /* Preview Content */,
 			);
@@ -125,6 +143,108 @@
 				4DA9C4BB2A423474006F31D8 /* Gympact2_0UITestsLaunchTests.swift */,
 			);
 			path = Gympact2.0UITests;
+			sourceTree = "<group>";
+		};
+		4DA9C4C92A423489006F31D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4A02A423470006F31D8 /* ContentView.swift */,
+				4DA9C4D42A423686006F31D8 /* ViewComponents */,
+				4DA9C4DD2A423A48006F31D8 /* AuthenticationView */,
+				4DA9C4DA2A423846006F31D8 /* MainView */,
+				4DA9C4D52A4236E3006F31D8 /* SettingsView */,
+				4DA9C4D32A423648006F31D8 /* StrengthView */,
+				4DA9C4D22A4235F4006F31D8 /* CardioView */,
+				4DA9C4CF2A4235A1006F31D8 /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DA9C4CA2A4234A7006F31D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DA9C4CB2A4234B1006F31D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DA9C4CF2A4235A1006F31D8 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4D02A4235BB006F31D8 /* Homeview.swift */,
+				4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */,
+				4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		4DA9C4D22A4235F4006F31D8 /* CardioView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4D62A423803006F31D8 /* Cardioview.swift */,
+			);
+			path = CardioView;
+			sourceTree = "<group>";
+		};
+		4DA9C4D32A423648006F31D8 /* StrengthView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4D82A42380E006F31D8 /* Strengthview.swift */,
+			);
+			path = StrengthView;
+			sourceTree = "<group>";
+		};
+		4DA9C4D42A423686006F31D8 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		4DA9C4D52A4236E3006F31D8 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		4DA9C4DA2A423846006F31D8 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4DB2A423857006F31D8 /* Mainview.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		4DA9C4DD2A423A48006F31D8 /* AuthenticationView */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4E12A423A83006F31D8 /* Register */,
+				4DA9C4E02A423A7C006F31D8 /* Login */,
+			);
+			path = AuthenticationView;
+			sourceTree = "<group>";
+		};
+		4DA9C4E02A423A7C006F31D8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4DE2A423A71006F31D8 /* Loginview.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4DA9C4E12A423A83006F31D8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4E22A423A95006F31D8 /* Registerview.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +377,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA9C4D72A423803006F31D8 /* Cardioview.swift in Sources */,
 				4DA9C4A12A423470006F31D8 /* ContentView.swift in Sources */,
+				4DA9C4DF2A423A71006F31D8 /* Loginview.swift in Sources */,
+				4DA9C4D92A42380E006F31D8 /* Strengthview.swift in Sources */,
+				4DA9C4DC2A423857006F31D8 /* Mainview.swift in Sources */,
+				4DA9C4E52A42469A006F31D8 /* HomeHeader.swift in Sources */,
+				4DA9C4E32A423A95006F31D8 /* Registerview.swift in Sources */,
+				4DA9C4E72A4250E2006F31D8 /* HomeStatsview.swift in Sources */,
 				4DA9C49F2A423470006F31D8 /* Gympact2_0App.swift in Sources */,
+				4DA9C4D12A4235BB006F31D8 /* Homeview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
