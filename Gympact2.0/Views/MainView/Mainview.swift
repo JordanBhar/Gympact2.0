@@ -15,6 +15,7 @@ struct Mainview: View {
             Homeview()
                 .tabItem{
                     Label("Home", systemImage: "house")
+                        .foregroundColor(Color.white)
                 }
             
             Strengthview()
@@ -26,7 +27,10 @@ struct Mainview: View {
                 .tabItem{
                     Label("Cardio", systemImage: "figure.run")
                 }
+
         }
+        .accentColor(Color("Selected"))
+       
     }
 }
 

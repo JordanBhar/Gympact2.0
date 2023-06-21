@@ -13,14 +13,14 @@ struct Homeview: View {
     var body: some View {
         VStack(spacing: 20){
             Group{
-                HomeHeader()
+                HomeHeader(name : "Jordan")
                 Divider()
             }
             
             
             Group(){
                 VStack(alignment: .leading){
-                    Text("Fitness Stats")
+                    BlackText(input: "Fitness Stats")
                         .padding()
                         .font(.title2)
                     HomeStatsview()

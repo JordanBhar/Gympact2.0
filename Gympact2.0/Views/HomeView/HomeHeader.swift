@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct HomeHeader: View {
-    private var motivationList : [String] = ["Feeling Energized? Lets Go" , "Ready to Workout ?", "Feeling Tired, Keep Going"]
+    
+    
+    var name : String
+    
+    var motivationList : [String] = ["Feeling Energized? Lets Go" , "Ready to Workout ?", "Feeling Tired, Keep Going"]
     
     @State private var selectedPhrase : String? = nil
+    
     var body: some View {
         VStack{
             HStack(alignment: .top){
                 VStack(alignment: .leading, spacing: 20){
-                    Text("Hello,  Jordan") //need to change this to a variable
+                    BlackText(input: "Hello, \(name)") //need to change this to a variable
                         .font(.title)
-                    Text(selectedPhrase ?? "")
+                    BlackText(input: selectedPhrase ?? "")
                         .font(.callout)
                 }
                 
@@ -39,6 +44,6 @@ struct HomeHeader: View {
 
 struct HomeHeader_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHeader()
+        HomeHeader(name: "")
     }
 }
