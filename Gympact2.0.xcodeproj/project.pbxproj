@@ -21,9 +21,11 @@
 		4DA9C4DF2A423A71006F31D8 /* Loginview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4DE2A423A71006F31D8 /* Loginview.swift */; };
 		4DA9C4E32A423A95006F31D8 /* Registerview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E22A423A95006F31D8 /* Registerview.swift */; };
 		4DA9C4E52A42469A006F31D8 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */; };
-		4DA9C4E72A4250E2006F31D8 /* HomeStatsview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */; };
 		4DA9C4E92A427B17006F31D8 /* TextComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4E82A427B17006F31D8 /* TextComponents.swift */; };
-		4DA9C4EB2A427D6B006F31D8 /* HorizontalWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4EA2A427D6B006F31D8 /* HorizontalWorkoutView.swift */; };
+		4DA9C4ED2A478C8E006F31D8 /* ShapeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4EC2A478C8E006F31D8 /* ShapeComponents.swift */; };
+		4DA9C4F02A4790F9006F31D8 /* FitnessStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4EF2A4790F9006F31D8 /* FitnessStatsView.swift */; };
+		4DA9C4F22A47925B006F31D8 /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4F12A47925B006F31D8 /* ChallengesView.swift */; };
+		4DA9C4F42A479317006F31D8 /* FitnessProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9C4F32A479317006F31D8 /* FitnessProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +63,11 @@
 		4DA9C4DE2A423A71006F31D8 /* Loginview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loginview.swift; sourceTree = "<group>"; };
 		4DA9C4E22A423A95006F31D8 /* Registerview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registerview.swift; sourceTree = "<group>"; };
 		4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
-		4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsview.swift; sourceTree = "<group>"; };
 		4DA9C4E82A427B17006F31D8 /* TextComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponents.swift; sourceTree = "<group>"; };
-		4DA9C4EA2A427D6B006F31D8 /* HorizontalWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalWorkoutView.swift; sourceTree = "<group>"; };
+		4DA9C4EC2A478C8E006F31D8 /* ShapeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeComponents.swift; sourceTree = "<group>"; };
+		4DA9C4EF2A4790F9006F31D8 /* FitnessStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessStatsView.swift; sourceTree = "<group>"; };
+		4DA9C4F12A47925B006F31D8 /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
+		4DA9C4F32A479317006F31D8 /* FitnessProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA9C4D02A4235BB006F31D8 /* Homeview.swift */,
-				4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */,
-				4DA9C4E62A4250E2006F31D8 /* HomeStatsview.swift */,
+				4DA9C4EE2A4790CE006F31D8 /* Components */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -200,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA9C4D82A42380E006F31D8 /* Strengthview.swift */,
-				4DA9C4EA2A427D6B006F31D8 /* HorizontalWorkoutView.swift */,
+				4DA9C4F52A479981006F31D8 /* Components */,
 			);
 			path = StrengthView;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA9C4E82A427B17006F31D8 /* TextComponents.swift */,
+				4DA9C4EC2A478C8E006F31D8 /* ShapeComponents.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -251,6 +255,24 @@
 				4DA9C4E22A423A95006F31D8 /* Registerview.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		4DA9C4EE2A4790CE006F31D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9C4E42A42469A006F31D8 /* HomeHeader.swift */,
+				4DA9C4F32A479317006F31D8 /* FitnessProgressView.swift */,
+				4DA9C4EF2A4790F9006F31D8 /* FitnessStatsView.swift */,
+				4DA9C4F12A47925B006F31D8 /* ChallengesView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4DA9C4F52A479981006F31D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,14 +407,16 @@
 			files = (
 				4DA9C4D72A423803006F31D8 /* Cardioview.swift in Sources */,
 				4DA9C4A12A423470006F31D8 /* ContentView.swift in Sources */,
-				4DA9C4EB2A427D6B006F31D8 /* HorizontalWorkoutView.swift in Sources */,
 				4DA9C4DF2A423A71006F31D8 /* Loginview.swift in Sources */,
+				4DA9C4F42A479317006F31D8 /* FitnessProgressView.swift in Sources */,
 				4DA9C4E92A427B17006F31D8 /* TextComponents.swift in Sources */,
 				4DA9C4D92A42380E006F31D8 /* Strengthview.swift in Sources */,
+				4DA9C4ED2A478C8E006F31D8 /* ShapeComponents.swift in Sources */,
+				4DA9C4F02A4790F9006F31D8 /* FitnessStatsView.swift in Sources */,
 				4DA9C4DC2A423857006F31D8 /* Mainview.swift in Sources */,
 				4DA9C4E52A42469A006F31D8 /* HomeHeader.swift in Sources */,
+				4DA9C4F22A47925B006F31D8 /* ChallengesView.swift in Sources */,
 				4DA9C4E32A423A95006F31D8 /* Registerview.swift in Sources */,
-				4DA9C4E72A4250E2006F31D8 /* HomeStatsview.swift in Sources */,
 				4DA9C49F2A423470006F31D8 /* Gympact2_0App.swift in Sources */,
 				4DA9C4D12A4235BB006F31D8 /* Homeview.swift in Sources */,
 			);

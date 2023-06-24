@@ -10,8 +10,10 @@ import SwiftUI
 struct Strengthview: View {
     private var optionsList : [String] = ["Create Workout" , "Workout Library"]
     @State private var selection = 0
+    @State private var showAlert = false
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 50){
+        VStack(alignment: .leading){
             
             BlackText(input: "Strength Training")
                 .font(.largeTitle)
@@ -38,47 +40,47 @@ struct Strengthview: View {
 
                     }
                 }
-                .padding(EdgeInsets(top:-30 , leading: 0, bottom: 40 , trailing: 0))
+                .padding()
 
                 
                 
-                Group(){
-                    HStack{
-                        BlackText(input: "My Workouts")
-                            .font(.title)
-                        
-                        Spacer()
-                    }
-                        
-                    
-                    HorizontalWorkoutView() //this will need to display a list of workouts
-                        .padding()
-                        .frame(width: UIScreen.main.bounds.width)
-                }
                 
-                
-                Group(){
-                    HStack{
-                        BlackText(input: "Explore Workouts")
-                            
+            }
+            
+            ScrollView(.vertical){
+                VStack(alignment: .leading){
+                    Group(){
+                        BlackText(input: "Strength Training")
                             .font(.title)
-                        
-                        Spacer()
+                            .padding()
+                        CouraselView()
                     }
-                  
                     
-                    HorizontalWorkoutView() //this will need to display a list of workouts
-                        .padding()
-                        .frame(width: UIScreen.main.bounds.width)
-
+                    Group(){
+                        BlackText(input: "Strength Training")
+                            .font(.title)
+                            .padding()
+                        CouraselView()
+                    }
+                    
+                    Group(){
+                        ZStack(){
+                            InfoRectangleView(width: UIScreen.main.bounds.width-20, height: 100)
+                                .padding()
+                            Text("Workout Libarary")
+                                .font(.title2)
+                        }
+                        .onTapGesture {
+                            showAlert = true //need to change this to a navigaton
+                        }
+                    }
                 }
             }
             
             
-            
             Spacer()
+            
         }
-        .padding(EdgeInsets(top:0 , leading: 50, bottom: 0 , trailing: 50))
     }
 }
 
