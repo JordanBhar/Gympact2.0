@@ -14,7 +14,7 @@ struct NutritionIntakeView: View {
             .padding()
             .font(.title2)
         
-        InfoRectangleView(width: UIScreen.main.bounds.width-20, height: 200)
+        InfoRectangleView(width: UIScreen.main.bounds.width-30, height: 200)
             .padding()
         
         

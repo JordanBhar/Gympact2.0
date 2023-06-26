@@ -28,14 +28,14 @@ struct HomeHeader: View {
                 
                 Spacer()
                 
-                Image(systemName: "dumbbell")
+                Image("Profile")
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .frame(width: 50)
+                    .frame(width: 75)
             }
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
         .onAppear(){
             selectedPhrase = self.motivationList.randomElement()
         }

@@ -9,10 +9,15 @@ import SwiftUI
 
 struct FitnessProgressView: View {
     var body: some View {
+        BlackText(input: "Fitness Stats")
+            .padding()
+            .font(.title2)
         HStack(alignment: .top){
             
             Group(){
+                
                 ZStack(){
+                    
                     InfoRectangleView(width: 170.0 , height: 300.0 )
                     VStack(){
                         Text("SDSDSDD")

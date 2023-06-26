@@ -22,8 +22,13 @@ struct Homeview: View {
             VStack(){
                 Group{
                     HomeHeader(name : "Jordan")
-                    Divider()
                 }
+                
+                Group(){
+                    WeekView()
+                }
+                
+                Divider()
             }
             
             
@@ -33,14 +38,11 @@ struct Homeview: View {
                 VStack(alignment: .leading){
                     
                     Group(){
-                        
+                
                         Group(){
                             FitnessProgressView()
                         }
                         
-                        Group(){
-                            FitnessStatsView()
-                        }
                         
                         Group(){
                             NutritionIntakeView()
@@ -50,6 +52,7 @@ struct Homeview: View {
                     Spacer() //Bottom
                     
                 }
+                .padding()
             }
         }
     }
