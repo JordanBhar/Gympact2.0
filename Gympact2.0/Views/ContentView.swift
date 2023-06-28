@@ -23,11 +23,11 @@ struct ContentView: View {
                 
                 NavigationLink(destination: RegisterView(), tag: 2, selection: self.$selection){}
                 
-                Image("logo")
+                Image("Logo")
                     .resizable()
                     .frame(width: 350, height: 150)
                 
-                Image("deadlift")
+                Image("Deadlift")
                     .resizable()
                     .frame(width: 330, height: 335)
                 

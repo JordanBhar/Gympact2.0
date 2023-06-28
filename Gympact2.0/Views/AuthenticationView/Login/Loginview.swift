@@ -101,30 +101,32 @@ import FirebaseAuth
         }
         
         func login(){
-            Auth.auth().signIn(withEmail: email, password: password){result, error in
-                if error != nil {
-                    showingAlert = true
-                    msg = error!.localizedDescription
-                } else {
-                    
-                    let ref = Firestore.firestore().collection("UserData")
-                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
-                        if error != nil {
-                            // Handle error
-                        } else {
-                            if !querySnapshot!.isEmpty {
-                                self.selection = 2
-                            } else {
-                                self.selection = 3
-                            }
-                        }
-                    }
-                    
-
-                }
-                
-                
-            }
+//            Auth.auth().signIn(withEmail: email, password: password){result, error in
+//                if error != nil {
+//                    showingAlert = true
+//                    msg = error!.localizedDescription
+//                } else {
+//
+//                    let ref = Firestore.firestore().collection("UserData")
+//                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
+//                        if error != nil {
+//                            // Handle error
+//                        } else {
+//                            if !querySnapshot!.isEmpty {
+//                                self.selection = 2
+//                            } else {
+//                                self.selection = 3
+//                            }
+//                        }
+//                    }
+//
+//
+//                }
+//
+//
+//            }
+            
+            self.selection = 3
         }
     }
     
