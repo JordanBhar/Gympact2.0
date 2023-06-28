@@ -6,14 +6,12 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import FirebaseAuth
 import Firebase
 
 struct RegisterInfoView: View {
     
-    //@EnvironmentObject var fireDBHelper : FireDBHelper
+    @EnvironmentObject var fireDBHelper : FireDBHelper
     
     @State public var selectedGender: String = "Male"
     
@@ -32,14 +30,14 @@ struct RegisterInfoView: View {
     ]
     
     var body: some View {
-//        NavigationLink(destination: Goals(
-//            selectionAge: self.selectionAge,
-//            selectionWeight: self.selectionWeight,
-//            selectionFeet: self.selectionFeet,
-//            selectionInches: self.selectionInches,
-//            selectedGender: self.selectedGender
-//
-//        ), tag: 1, selection: self.$selection){}
+        NavigationLink(destination: Goals(
+            selectionAge: self.selectionAge,
+            selectionWeight: self.selectionWeight,
+            selectionFeet: self.selectionFeet,
+            selectionInches: self.selectionInches,
+            selectedGender: self.selectedGender
+            
+        ), tag: 1, selection: self.$selection){}
         
         VStack(spacing: 30){
             
@@ -167,9 +165,9 @@ struct RegisterInfoView: View {
                 
                 Button(action: {
                     
-//                    fireDBHelper.setUserData(userData: User.init(gender: selectedGender, age: selectionAge, feet: selectionFeet, inches: selectionInches, weight: Float(selectionWeight), goal_weight: false, goal_muscle: false))
+                    fireDBHelper.setUserData(userData: User.init(gender: selectedGender, age: selectionAge, feet: selectionFeet, inches: selectionInches, weight: Float(selectionWeight), goal_weight: false, goal_muscle: false))
                     
-//                    self.selection = 1
+                    self.selection = 1
                   
                 }){
                     Text("NEXT")
