@@ -29,10 +29,10 @@ struct HomeHeader: View {
                 Spacer()
                 
                 Image("Profile")
-                    .resizable()
+                    .frame(width: 60, height: 60)
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .frame(width: 75)
+                    
             }
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))

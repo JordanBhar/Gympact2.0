@@ -44,6 +44,6 @@ struct CouraselView: View{
 
 struct ShapeComponents_Previews: PreviewProvider {
     static var previews: some View {
-        ShapeComponents()
+        CouraselView()
     }
 }

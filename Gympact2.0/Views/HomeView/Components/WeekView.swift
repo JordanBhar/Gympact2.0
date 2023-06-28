@@ -72,7 +72,7 @@ struct WeekView: View {
     
     func monthYearText(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM yyyy"
+        dateFormatter.dateFormat = "MMMM, yyyy"
         return dateFormatter.string(from: date)
     }
     
