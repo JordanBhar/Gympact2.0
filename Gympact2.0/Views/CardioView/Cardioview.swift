@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Cardioview: View {
+struct CardioView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Cardioview_Previews: PreviewProvider {
+struct CardioView_Previews: PreviewProvider {
     static var previews: some View {
-        Cardioview()
+        CardioView()
     }
 }
