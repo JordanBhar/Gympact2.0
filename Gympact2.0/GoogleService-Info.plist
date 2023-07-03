@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>gympact2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1022444555433:ios:7d0870a00ab94ebde22db8</string>
+	<key>DATABASE_URL</key>
+	<string>https://gympact2-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
