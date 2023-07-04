@@ -101,32 +101,26 @@ import FirebaseAuth
         }
         
         func login(){
-//            Auth.auth().signIn(withEmail: email, password: password){result, error in
-//                if error != nil {
-//                    showingAlert = true
-//                    msg = error!.localizedDescription
-//                } else {
-//
-//                    let ref = Firestore.firestore().collection("UserData")
-//                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
-//                        if error != nil {
-//                            // Handle error
-//                        } else {
-//                            if !querySnapshot!.isEmpty {
-//                                self.selection = 2
-//                            } else {
-//                                self.selection = 3
-//                            }
-//                        }
-//                    }
-//
-//
-//                }
-//
-//
-//            }
-            
-            self.selection = 3
+            Auth.auth().signIn(withEmail: email, password: password){result, error in
+                if error != nil {
+                    showingAlert = true
+                    msg = error!.localizedDescription
+                } else {
+                    
+                    let ref = Firestore.firestore().collection("Users")
+                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
+                        if error != nil {
+                            // Handle error
+                        } else {
+                            if !querySnapshot!.isEmpty { //if user
+                                self.selection = 2 //has no data take them to this
+                            } else {
+                                self.selection = 3 // if they have entered in starting data send them to regular home screen
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     

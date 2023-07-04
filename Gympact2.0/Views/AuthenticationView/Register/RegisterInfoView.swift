@@ -30,18 +30,10 @@ struct RegisterInfoView: View {
     ]
     
     var body: some View {
-//        NavigationLink(destination: Goals(
-//            selectionAge: self.selectionAge,
-//            selectionWeight: self.selectionWeight,
-//            selectionFeet: self.selectionFeet,
-//            selectionInches: self.selectionInches,
-//            selectedGender: self.selectedGender
-//
-//        ), tag: 1, selection: self.$selection){}
-        
+
         VStack(spacing: 30){
             
-            
+            NavigationLink(destination: HomeView(), tag: 1, selection: self.$selection){}
             
             Text("Enter Information")
                 .fontWeight(.bold)
