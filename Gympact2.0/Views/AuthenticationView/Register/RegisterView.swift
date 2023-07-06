@@ -11,6 +11,8 @@ import FirebaseAuth
 
     struct RegisterView: View {
         
+        @EnvironmentObject var fireDBHelper : FireDBHelper
+
         
         @State var email: String = ""
         @State var password: String = ""
@@ -51,7 +53,21 @@ import FirebaseAuth
                     
                    
                     Button(action: {
-                      register()
+                      
+                        fireDBHelper.registerUser(email: email, password: password) { result in
+                            switch result {
+                            case .success(let user):
+                                // Handle successful registration, such as navigating to a new view
+                                self.msg = ("Registration successful for user: \(user.email)")
+                                self.showingAlert = true
+                                
+                                
+                            case .failure(let error):
+                                // Handle registration failure, such as displaying an error message
+                                self.msg = ("Registration failed: \(error.localizedDescription)")
+                                self.showingAlert = true
+                            }
+                        }
                     }){
                         Text("Sign Up")
                             .modifier(CustomTextM(fontName: "MavenPro-Bold", fontSize: 16, fontColor: Color.white))
@@ -84,28 +100,6 @@ import FirebaseAuth
                 .padding(.vertical, 25)
             
         }
-        
-        
-        func register(){
-            Auth.auth().createUser(withEmail: email, password: password){result, error in
-                if error != nil {
-                    showingAlert = true
-                    msg = error!.localizedDescription
-                }
-                
-                Firestore.firestore().collection("Users").document(Auth.auth().currentUser!.uid).setData(["Gender": "", "Age": -1, "Feet":0, "Inches": 0, "Weight": 0.0, "Weight_Goal": false, "Muscle_Goal": false])
-                
-                showingAlert = true
-                msg = "You have successfully registered!"
-                
-            }
-            
-        
-            
-        }
-        
-        
-        
     }
     
     

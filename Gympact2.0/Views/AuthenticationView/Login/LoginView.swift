@@ -69,8 +69,9 @@ import FirebaseAuth
                                     if error != nil {
                                         // Handle error
                                     } else {
+                                        
                                         if !querySnapshot!.isEmpty { //if user
-                                            self.selection = 2 //has no data take them to this
+                                            self.selection = 3 //has no data take them to this
                                             //MARK: change this back to 2 i.e this is the flow if the user logs in for the first time after registering an account
                                         } else {
                                             self.selection = 3 // if they have entered in starting data send them to regular home screen
@@ -108,6 +109,7 @@ import FirebaseAuth
                                 .modifier(CustomTextM(fontName: "Oxygen-Bold", fontSize: 18, fontColor: Color.blue))
                         }
                     }
+                    
                 }
                 .navigationBarBackButtonHidden(true)
                 .padding(.horizontal,30)

@@ -78,7 +78,7 @@ struct ContentView: View {
             }.padding(.bottom, 75) //vstack
             
         }//nav stack
-        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden(true)
         
       
         
