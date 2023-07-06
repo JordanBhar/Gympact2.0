@@ -11,6 +11,8 @@ import FirebaseAuth
 
     struct LoginView: View {
         
+        @EnvironmentObject var fireDBHelper : FireDBHelper
+
         
         @State var email: String = ""
         @State var password: String = ""
@@ -57,10 +59,29 @@ import FirebaseAuth
                     
                     // SignIn
                     Button(action: {
-                    
-                    
-                        
-                        login()
+                        fireDBHelper.loginUser(email: self.email, password: self.password){ result in
+                            switch result {
+                            case .success(let user):
+                                print("Login successful for user: \(user.email)")
+                                // Handle successful login, such as navigating to a new view
+                                let ref = Firestore.firestore().collection("Users")
+                                ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
+                                    if error != nil {
+                                        // Handle error
+                                    } else {
+                                        if !querySnapshot!.isEmpty { //if user
+                                            self.selection = 2 //has no data take them to this
+                                            //MARK: change this back to 2 i.e this is the flow if the user logs in for the first time after registering an account
+                                        } else {
+                                            self.selection = 3 // if they have entered in starting data send them to regular home screen
+                                        }
+                                    }
+                                }
+                            case .failure(let error):
+                                print("Login failed: \(error.localizedDescription)")
+                                // Handle login failure, such as displaying an error message
+                            }
+                        }
                     }){
                         Text("Sign In")
                             .modifier(CustomTextM(fontName: "MavenPro-Bold", fontSize: 16, fontColor: Color.white))
@@ -98,29 +119,6 @@ import FirebaseAuth
                         }
                     }
                 }
-        }
-        
-        func login(){
-            Auth.auth().signIn(withEmail: email, password: password){result, error in
-                if error != nil {
-                    showingAlert = true
-                    msg = error!.localizedDescription
-                } else {
-                    
-                    let ref = Firestore.firestore().collection("Users")
-                    ref.whereField("Gender", isEqualTo: "").getDocuments { (querySnapshot, error) in
-                        if error != nil {
-                            // Handle error
-                        } else {
-                            if !querySnapshot!.isEmpty { //if user
-                                self.selection = 2 //has no data take them to this
-                            } else {
-                                self.selection = 3 // if they have entered in starting data send them to regular home screen
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
     

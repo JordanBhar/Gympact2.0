@@ -9,6 +9,9 @@ import Foundation
 
 class User: Identifiable{
     
+    let uid: UUID
+    let email: String
+    
     var gender: String = ""
     var age: Int = 0
     var feet: Int = 0
@@ -18,7 +21,9 @@ class User: Identifiable{
     var goal_muscle: Bool = false
     
     
-    init(gender: String, age: Int, feet: Int, inches: Int, weight: Float, goal_weight: Bool, goal_muscle: Bool){
+    init(uid: String, email: String, gender: String, age: Int, feet: Int, inches: Int, weight: Float, goal_weight: Bool, goal_muscle: Bool){
+        self.uid = UUID(uuidString: uid) ?? UUID() 
+        self.email = email
         self.inches = inches
         self.age = age;
         self.feet = feet

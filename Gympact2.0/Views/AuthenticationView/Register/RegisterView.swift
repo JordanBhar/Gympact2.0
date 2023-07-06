@@ -11,6 +11,7 @@ import FirebaseAuth
 
     struct RegisterView: View {
         
+        
         @State var email: String = ""
         @State var password: String = ""
         @State private var selection: Int? = nil
