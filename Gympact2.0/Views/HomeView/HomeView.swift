@@ -15,13 +15,16 @@ struct HomeView: View {
     
     //lastly i want to be able to plan workouts ahead of time, maybe this can be done from the home screen or the strrength view screen
     
+    @EnvironmentObject var fireDBHelper : FireDBHelper
+
+    
     var body: some View {
         
         VStack(){
             
             VStack(){
                 Group{
-                    HomeHeader(name : "Jordan")
+                    HomeHeader(name : "\(fireDBHelper.currentUser?.email)")
                 }
                 
                 Group(){
