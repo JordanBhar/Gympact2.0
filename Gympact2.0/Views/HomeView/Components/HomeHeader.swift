@@ -8,42 +8,58 @@
 import SwiftUI
 
 struct HomeHeader: View {
+    var name: String? = ""
     
+    var motivationList: [String] = ["Feeling Energized? Let's Go", "Ready to Workout?", "Feeling Tired, Keep Going"]
     
-    var name : String
-    
-    var motivationList : [String] = ["Feeling Energized? Lets Go" , "Ready to Workout ?", "Feeling Tired, Keep Going"]
-    
-    @State private var selectedPhrase : String? = nil
+    @State private var selectedPhrase: String? = nil
+    @State private var sort: Int = 0
+    @Binding var showSettings: Bool
+
     
     var body: some View {
-        VStack{
-            HStack(alignment: .top){
-                VStack(alignment: .leading, spacing: 20){
-                    BlackText(input: "Hello, \(name)") //need to change this to a variable
-                        .font(.title)
-                    BlackText(input: selectedPhrase ?? "")
-                        .font(.callout)
+        NavigationView {
+            HStack(alignment: .center) {
+                
+                
+                VStack(alignment: .leading) {
+                    Text("Hello, \(self.name ?? "")")
+                        .bold()
+                        .font(.largeTitle)
+                    
+                    BlackText(input: self.selectedPhrase ?? "")
                 }
                 
                 Spacer()
                 
-                Image("Profile")
-                    .frame(width: 60, height: 60)
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    
+                
+                Button(action:{
+                    showSettings = true
+                }){
+                    Image("Profile")
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 60, height: 60)
+                }
+                
+                
             }
+            .padding()
         }
-        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-        .onAppear(){
-            selectedPhrase = self.motivationList.randomElement()
+        .frame(height: 75)
+        .onAppear {
+            self.selectedPhrase = self.motivationList.randomElement()
         }
     }
 }
 
 struct HomeHeader_Previews: PreviewProvider {
+    @State static var showSettings: Bool = false
+    
     static var previews: some View {
-        HomeHeader(name: "")
+        HomeHeader(name: "John Doe", showSettings: $showSettings)
     }
 }
+
+
+

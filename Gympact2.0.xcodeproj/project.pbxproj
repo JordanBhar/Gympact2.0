@@ -42,6 +42,7 @@
 		4DB9238C2A4CDEF600F9A7E1 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB9238B2A4CDEF600F9A7E1 /* FirebaseRemoteConfig */; };
 		4DB9238E2A4CDEF600F9A7E1 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB9238D2A4CDEF600F9A7E1 /* FirebaseRemoteConfigSwift */; };
 		4DB923902A4CDEF600F9A7E1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB9238F2A4CDEF600F9A7E1 /* FirebaseStorage */; };
+		4DD2DF412A57BA200098AB07 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2DF402A57BA200098AB07 /* SettingsView.swift */; };
 		4DF96E562A52410600B461BA /* StrengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF96E552A52410600B461BA /* StrengthViewController.swift */; };
 		4DF96E582A52417700B461BA /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF96E572A52417700B461BA /* Exercises.swift */; };
 		4DF96E5A2A5242C000B461BA /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF96E592A5242C000B461BA /* VideoView.swift */; };
@@ -94,6 +95,7 @@
 		4DB9234F2A4CD4CA00F9A7E1 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		4DB923722A4CDA1000F9A7E1 /* RegisterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoView.swift; sourceTree = "<group>"; };
 		4DB923742A4CDA8200F9A7E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4DD2DF402A57BA200098AB07 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Gympact2.0/Views/AuthenticationView/Register/SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		4DF96E552A52410600B461BA /* StrengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthViewController.swift; sourceTree = "<group>"; };
 		4DF96E572A52417700B461BA /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		4DF96E592A5242C000B461BA /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		4DA9C4D52A4236E3006F31D8 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				4DD2DF402A57BA200098AB07 /* SettingsView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				4DA9C4E92A427B17006F31D8 /* TextComponents.swift in Sources */,
 				4DA9C4D92A42380E006F31D8 /* StrengthView.swift in Sources */,
 				4DA9C4FA2A4A2E63006F31D8 /* WeekView.swift in Sources */,
+				4DD2DF412A57BA200098AB07 /* SettingsView.swift in Sources */,
 				4DA9C4ED2A478C8E006F31D8 /* ShapeComponents.swift in Sources */,
 				4DA9C4DC2A423857006F31D8 /* MainView.swift in Sources */,
 				4DA9C4F82A4A29FC006F31D8 /* ExerciseLibraryView.swift in Sources */,

@@ -16,26 +16,22 @@ struct HomeView: View {
     //lastly i want to be able to plan workouts ahead of time, maybe this can be done from the home screen or the strrength view screen
     
     @EnvironmentObject var fireDBHelper : FireDBHelper
-
+    @State private var showSettings: Bool = false
+    @State var selection : Int? = 0
     
     var body: some View {
         
         VStack(){
             
+            NavigationLink(destination: SettingsView(), tag: 1, selection: self.$selection){}
+            
+            
             VStack(){
-                Group{
-                    HomeHeader(name : "\(fireDBHelper.currentUser?.email)")
-                }
+                HomeHeader(name : "\(fireDBHelper.currentUser?.email ?? "")", showSettings: $showSettings )
                 
-                Group(){
-                    WeekView()
-                }
-                
-                Divider()
+                WeekView()
             }
-            
-            
-            
+        
             ScrollView(.vertical){
                 
                 VStack(alignment: .leading){
@@ -52,13 +48,18 @@ struct HomeView: View {
                         }
                     }
                     
-                    Spacer() //Bottom
+        
                     
                 }
                 .padding()
             }
+            
+            
         }
         .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $showSettings) {
+                    SettingsView()
+                }
     }
 }
     
